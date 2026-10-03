@@ -1,0 +1,13 @@
+{
+  "name": "matchos-website",
+  "private": true,
+  "description": "MATCHOS official website (Cloudflare Workers Static Assets)",
+  "scripts": {
+    "dev": "wrangler dev",
+    "check": "wrangler deploy --dry-run",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.147.0"
+  }
+}

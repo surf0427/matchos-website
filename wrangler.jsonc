@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Static-assets-only Worker: no Worker script, everything is served from ./public.
+  "name": "matchos-website",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    // /privacy serves privacy.html; /privacy.html redirects to /privacy.
+    "html_handling": "auto-trailing-slash",
+    // Unknown paths serve public/404.html with a 404 status.
+    "not_found_handling": "404-page"
+  }
+}
