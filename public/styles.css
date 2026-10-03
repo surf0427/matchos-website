@@ -277,6 +277,65 @@ h1, h2, h3, .section-title { font-family: var(--font-rounded); }
 .doc p { margin: 0 0 1rem; }
 .doc .meta { color: var(--text-secondary); margin: 0 0 1.5rem; }
 .doc ul:not([class]) { padding-left: 1.25rem; }
+.doc li { margin: 0 0 0.375rem; }
+.doc h3 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 1.75rem 0 0.5rem;
+}
+.doc .doc-links { margin-top: 2.5rem; color: var(--text-secondary); }
+
+/* Policy tables: scroll sideways inside their own box on narrow screens,
+   never the page. */
+.doc .table-wrap {
+  max-width: var(--measure);
+  overflow-x: auto;
+  margin: 0 0 1.25rem;
+  border: 1px solid var(--card-stroke);
+  border-radius: var(--corner-radius);
+  background: var(--card-fill);
+}
+.doc .table-wrap:focus-visible { outline-offset: 2px; }
+.doc table {
+  width: 100%;
+  min-width: 34rem;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+.doc th, .doc td {
+  text-align: start;
+  vertical-align: top;
+  padding: 0.625rem 0.875rem;
+  border-bottom: 1px solid var(--card-stroke);
+}
+.doc thead th { color: var(--text-secondary); font-weight: 600; font-size: 0.8125rem; letter-spacing: 0.02em; }
+.doc tbody th { font-weight: 600; }
+.doc tbody tr:last-child th, .doc tbody tr:last-child td { border-bottom: 0; }
+
+/* Narrow screens: each row becomes a labelled card instead of a wide grid. */
+@media (max-width: 40rem) {
+  .doc .table-wrap { overflow-x: visible; border: 0; background: none; }
+  .doc table { min-width: 0; }
+  .doc thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .doc table, .doc tbody, .doc tr, .doc th, .doc td { display: block; width: 100%; }
+  .doc tbody tr {
+    background: var(--card-fill);
+    border: 1px solid var(--card-stroke);
+    border-radius: var(--corner-radius);
+    margin: 0 0 0.75rem;
+    padding: 0.25rem 0;
+  }
+  .doc tbody th, .doc tbody td, .doc tbody tr:last-child th, .doc tbody tr:last-child td { border-bottom: 0; padding: 0.375rem 0.875rem; }
+  .doc td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.8125rem;
+    font-weight: 600;
+  }
+}
 
 .notice {
   background: var(--card-fill);
@@ -298,10 +357,13 @@ h1, h2, h3, .section-title { font-family: var(--font-rounded); }
   padding: 0 0.35em;
   font-weight: 600;
   font-size: 0.9375em;
-  display: inline-block;
+  display: inline;
   max-width: 100%;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
   line-height: 1.5;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .toc {
