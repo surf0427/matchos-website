@@ -27,8 +27,10 @@ npm run check    # wrangler deploy --dry-run (validates config, uploads nothing)
 Pushing to `main` deploys through the Cloudflare Workers Builds integration, which runs
 `npx wrangler deploy` at the repository root. Do not commit API tokens or credentials.
 
-## Placeholders
+## Legal pages
 
-Text marked `[REQUIRES OWNER INPUT]` on the Privacy, Terms and Support pages is waiting for
-the site owner. Canonical URLs, `og:url`/`og:image`, a favicon and app store links are left
-as commented placeholders until the domain, assets and store listings exist.
+The Privacy Policy, Terms of Service and Support pages are final, published text with no
+placeholders. `public/privacy.html` is generated from `docs/privacy-policy-final-draft.md` in
+the app repository; keep the two identical. Internal drafting notes for the Terms (sources and
+open owner decisions) are in `docs/terms-legal-notes.md`, which is not deployed.
+`og:image` and app store links stay out until those assets and store listings exist.
