@@ -39,7 +39,7 @@
     <article class="wrap" aria-labelledby="page-title">
       <h1 id="page-title">Privacy Policy</h1>
       <p class="meta"><strong>Effective date:</strong> October 3, 2026<br>
-      <strong>Last updated:</strong> October 3, 2026</p>
+      <strong>Last updated:</strong> October 5, 2026</p>
       <nav class="toc" aria-labelledby="toc-title">
       <h2 id="toc-title">Contents</h2>
       <ol>
@@ -139,8 +139,23 @@
       <li><strong>Network information:</strong> our service providers process your IP address when your device connects to them. In calls, your IP address may also be visible to the other participants (see <a href="#s8">Section 8</a>).</li>
       </ul>
       <h3>4.8 Location-Related Information</h3>
-      <p>MATCHOS does not request access to your device's location and does not collect GPS or other precise location. MATCHOS processes the photos and videos you upload so that embedded location metadata (such as GPS coordinates) is not kept.</p>
-      <p>The location-related information MATCHOS does handle is:</p>
+      <p><strong>Approximate location (optional).</strong> MATCHOS asks for your device's approximate location only when you choose to use one of these features:</p>
+      <ul>
+      <li><strong>People nearby</strong> in Moment, when you turn on "Show me to people nearby";</li>
+      <li><strong>Prefer nearby opponents</strong> in Settings, which applies to Casual HOME battles and Casual GYM Machine and Free Weight battles.</li>
+      </ul>
+      <p>MATCHOS does not read your location when the app starts, does not track it continuously, and never reads it in the background. On iOS, MATCHOS asks only for "While Using the App" access and requests reduced (approximate) accuracy. On Android, MATCHOS asks only for approximate location; it does not ask for precise or background location.</p>
+      <p>How it works:</p>
+      <ul>
+      <li><strong>Your device turns the reading into an approximate area of about 5 km before anything is sent.</strong> The raw latitude and longitude stay on your device, are used only to work out that area, and are then discarded. They are never sent to MATCHOS servers.</li>
+      <li><strong>We store only a coarse area identifier</strong>, linked to your account, to run these features. We keep one current area per account. A new reading replaces the old one, so we keep no history of where you have been.</li>
+      <li><strong>It expires.</strong> The area is deleted automatically: within 72 hours if you use People nearby, or within 6 hours if you use only Prefer nearby opponents. It is deleted straight away when you turn both features off, when you take location access away from MATCHOS in your device settings (the next time you open the app), when your account is restricted, or when you delete your account.</li>
+      <li><strong>People nearby is mutual.</strong> Only people who have turned on "Show me to people nearby" appear in each other's list, and you can see people nearby only while you are visible yourself. Blocked and restricted accounts are not shown. Other users see only a label such as "Nearby" or "In your area". They never see your exact location, your coordinates, your area identifier, or a distance.</li>
+      <li><strong>Battles use it only as a preference.</strong> If both players have turned on Prefer nearby opponents, a nearby opponent is tried first; if there is none, you are matched as usual straight away. Your area is not shown in battles or results. Ranked, Friend, 4-player, Cardio and Chat Mode matchmaking do not use location.</li>
+      <li><strong>What it is not used for:</strong> advertising, tracking, recommendations, events, or showing anyone's exact position. Events use only the venue text that hosts type.</li>
+      <li>If you do not allow location, MATCHOS keeps working, and Near me shows people in the city you set.</li>
+      </ul>
+      <p><strong>Other location-related information</strong> MATCHOS handles:</p>
       <ul>
       <li>the nationality you select and the city you type on your profile. Your city is used for the "Near me" list of people in the same city;</li>
       <li>your device's time zone;</li>
@@ -148,6 +163,7 @@
       <li>IP addresses, which are processed for network connections, calls and Live streaming (Sections <a href="#s8">8</a> and <a href="#s9">9</a>).</li>
       </ul>
       <p>We do not use your IP address to work out where you are.</p>
+      <p><strong>Photos and videos.</strong> MATCHOS processes the photos and videos you upload so that embedded location metadata (such as GPS coordinates) is not kept.</p>
       </section>
       <section aria-labelledby="s5">
       <h2 id="s5">5. Information We Do Not Collect</h2>
@@ -155,7 +171,7 @@
       <ul>
       <li>your email address, phone number or real name (you can choose to put your real name in your username or bio);</li>
       <li>your date of birth, exact age, or a record of age confirmation;</li>
-      <li>GPS or other precise location from your device;</li>
+      <li>your precise location, such as GPS coordinates (your device converts location to an approximate area of about 5 km before anything is sent; see Section 4.8);</li>
       <li>data from Apple Health, Health Connect or Google Fit, or your body weight, heart rate or medical information;</li>
       <li>your device's advertising identifier;</li>
       <li>your card number or other payment details (Apple handles payment);</li>
@@ -170,6 +186,7 @@
       <p>We use information to:</p>
       <ul>
       <li><strong>run MATCHOS:</strong> create and maintain your account; show your profile; run battles, games, calls, Live streams and events; deliver messages; and calculate records, rankings, XP, Tiers and streaks;</li>
+      <li><strong>show people nearby and prefer nearby opponents</strong>, only if you turn these features on (Section 4.8);</li>
       <li><strong>recommend content</strong> in the For You feed (<a href="#s12">Section 12</a>);</li>
       <li><strong>process coin purchases, Super Chat and refunds</strong>, and keep the related records (<a href="#s10">Section 10</a>);</li>
       <li><strong>send push notifications</strong> (<a href="#s11">Section 11</a>);</li>
@@ -199,7 +216,8 @@
       <li>events, and the list of people taking part in each event;</li>
       <li>communities, including their names, descriptions and member counts;</li>
       <li>Live streams, Live comments and Super Chat messages;</li>
-      <li>a Yellow Card title on your profile, if you have received Yellow Cards.</li>
+      <li>a Yellow Card title on your profile, if you have received Yellow Cards;</li>
+      <li>if you turn on "Show me to people nearby": your appearance in the People nearby list of other users who have also turned it on, with a label such as "Nearby" or "In your area". Your exact location, coordinates, area identifier and distance are never shown (Section 4.8).</li>
       </ul>
       <h3>7.3 Visible only to participants</h3>
       <ul>
@@ -327,7 +345,7 @@
       <section aria-labelledby="s16">
       <h2 id="s16">16. Data Retention</h2>
       <p><strong>While your account exists</strong>, we keep your profile, content, records, settings and recommendation signals until you delete them or delete your account (<a href="#s17">Section 17</a>).</p>
-      <p><strong>Automatic deletion.</strong> Finished matchmaking requests are deleted 30 days after they finish.</p>
+      <p><strong>Automatic deletion.</strong> Finished matchmaking requests are deleted 30 days after they finish. Your approximate area is deleted within 72 hours (People nearby) or 6 hours (Prefer nearby opponents only), or straight away when you turn both features off (Section 4.8).</p>
       <p><strong>After you delete content or your account</strong>, some information is kept for the purposes below.</p>
       <ul>
       <li><strong>Moderation and safety records:</strong> reports (including the copy of reported content and the reported username), Yellow Card contribution records, moderation action logs, and moderation alert records and emails (including the username and member number at the time of the alert). We keep these to protect users, prevent repeat abuse, and handle disputes and legal claims about moderation decisions. They are linked to the user ID of the account involved. These records are not deleted automatically after a fixed period. Instead, <strong>we review them at least once a year and delete or anonymize records that are no longer reasonably necessary for safety, abuse prevention, dispute handling or applicable legal obligations.</strong> Records connected to an unresolved dispute, ongoing abuse or fraud, or a legal requirement may be kept for as long as that need continues. Copies of moderation alert emails are held in the operator's mailbox and in Resend's systems, and are covered by the same review.</li>
@@ -343,6 +361,7 @@
       <p>When your account is deleted, we delete:</p>
       <ul>
       <li>your profile, settings and matchmaking preferences;</li>
+      <li>your stored approximate area (Section 4.8);</li>
       <li>your Moments, comments, likes, reposts, saves, goals and records;</li>
       <li>all files stored in your account's storage folder, including photos and videos;</li>
       <li>your follows, friendships, friend requests and blocks;</li>
