@@ -106,7 +106,7 @@
       <h3>4.3 Fitness and Activity</h3>
       <p>MATCHOS stores the fitness information you create or record in the app:</p>
       <ul>
-      <li><strong>Battles and games:</strong> the exercise or game, HOME or GYM, the mode and rules, the rep counts entered by players, and the outcome (win, loss or draw). GYM battles also store the weight lifted. 4-player games, Chat Mode video rooms and Cardio Train Together sessions store who took part and when. Train Together also stores the machine type.</li>
+      <li><strong>Battles and games:</strong> the exercise or game, HOME or GYM, the mode and rules, the rep counts entered by players, and the outcome (win, loss or draw). GYM battles also store the weight lifted. 4-player games, Train Together video rooms and GYM Cardio sessions store who took part and when. Cardio also stores the machine type.</li>
       <li><strong>Progress:</strong> XP, level, ranked points, Tier, wins, losses and draws, and your world and country ranking.</li>
       <li><strong>Records you post:</strong> workout records such as manual records and stopwatch times (including duration), goals you set and achieve, and <strong>Weight Records</strong>. A Weight Record stores the exercise, the weight lifted, the reps, a required lift video, and your country and world rank at the time you posted.</li>
       <li><strong>Activity calendar and streak:</strong> which days you were active and what you did, and your daily activity streak.</li>
@@ -155,7 +155,7 @@
       <li><strong>We store only a coarse area identifier</strong>, linked to your account, to run People nearby and Prefer nearby opponents. We keep one current area per account. A new reading replaces the old one, so we keep no history of where you have been.</li>
       <li><strong>It expires.</strong> The area is deleted automatically: within 72 hours if you use People nearby, or within 6 hours if you use only Prefer nearby opponents. It is deleted straight away when you turn both features off, when you take location access away from MATCHOS in your device settings (the next time you open the app), when your account is restricted, or when you delete your account.</li>
       <li><strong>People nearby is mutual.</strong> Only people who have turned on "Show me to people nearby" appear in each other's list, and you can see people nearby only while you are visible yourself. Blocked and restricted accounts are not shown. Other users see only a label such as "Nearby" or "In your area". They never see your exact location, your coordinates, your area identifier, or a distance.</li>
-      <li><strong>Battles use it only as a preference.</strong> If both players have turned on Prefer nearby opponents, a nearby opponent is tried first; if there is none, you are matched as usual straight away. Your area is not shown in battles or results. Ranked, Friend, 4-player, Cardio and Chat Mode matchmaking do not use location.</li>
+      <li><strong>Battles use it only as a preference.</strong> If both players have turned on Prefer nearby opponents, a nearby opponent is tried first; if there is none, you are matched as usual straight away. Your area is not shown in battles or results. Ranked, Friend, 4-player, Cardio and Train Together matchmaking do not use location.</li>
       <li><strong>What it is not used for:</strong> advertising, tracking, recommendations, or showing anyone's exact position. Your approximate area is never stored with an event and never shown to other users.</li>
       <li>If you do not allow location, MATCHOS keeps working: Near me in Moment shows people in the city you set, and you can still search Events by typing a place.</li>
       </ul>
@@ -186,7 +186,7 @@
       <li>your card number or other payment details (Apple handles payment);</li>
       <li>how long you watch Live streams;</li>
       <li>analytics or crash reports (the apps do not include analytics or crash-reporting tools);</li>
-      <li>recordings of Battle, video call or Chat Mode audio or video (except in a Live Challenge; see <a href="#s9">Section 9</a>).</li>
+      <li>recordings of Battle, video call or Train Together audio or video (except in a Live Challenge; see <a href="#s9">Section 9</a>).</li>
       </ul>
       <p>We do not show third-party advertising, and we do not track you across other companies' apps or websites.</p>
       </section>
@@ -248,12 +248,12 @@
       </section>
       <section aria-labelledby="s8">
       <h2 id="s8">8. Battles and Video Calls</h2>
-      <p>Battles, 4-player games, Chat Mode video rooms, Cardio Train Together and Live Challenges use real-time video and audio between participants.</p>
+      <p>Battles, 4-player games, Train Together video rooms, GYM Cardio and Live Challenges use real-time video and audio between participants.</p>
       <ul>
       <li><strong>Connections:</strong> audio and video travel directly between participants' devices where possible. If a direct connection is not possible, they are relayed through Cloudflare's relay (TURN) service. The media is encrypted in transit.</li>
       <li><strong>Connection setup:</strong> to start a call, the app exchanges technical connection details (such as network addresses and media settings) through our real-time messaging service, provided by Supabase. Your device also contacts public connection (STUN) servers run by Google, and Cloudflare's servers.</li>
       <li><strong>Your IP address:</strong> because of how these connections work, other participants in a call, Google's STUN servers and Cloudflare may see your device's IP address.</li>
-      <li><strong>No recording:</strong> MATCHOS does not record or store the audio or video of Battles, 4-player games, Chat Mode video rooms or Train Together sessions.</li>
+      <li><strong>No recording:</strong> MATCHOS does not record or store the audio or video of Battles, 4-player games, Train Together video rooms or GYM Cardio sessions.</li>
       <li><strong>What we store:</strong> who took part in a call, game or room; when it started and ended; and, for Battles, the results described in <a href="#s4">Section 4.3</a>.</li>
       </ul>
       <p><strong>Exception:</strong> if you take part in a Live Challenge, your video and audio become part of the host's public Live stream (<a href="#s9">Section 9</a>).</p>
