@@ -39,7 +39,7 @@
     <article class="wrap" aria-labelledby="page-title">
       <h1 id="page-title">Privacy Policy</h1>
       <p class="meta"><strong>Effective date:</strong> October 3, 2026<br>
-      <strong>Last updated:</strong> October 9, 2026</p>
+      <strong>Last updated:</strong> October 12, 2026</p>
       <nav class="toc" aria-labelledby="toc-title">
       <h2 id="toc-title">Contents</h2>
       <ol>
@@ -118,7 +118,7 @@
       <ul>
       <li><strong>Moments:</strong> posts with photos or videos (including any sound in the video), captions and topics, as well as likes, comments, reposts and saves.</li>
       <li><strong>Social connections:</strong> who you follow and who follows you, friend requests and friendships, accounts you block, and the communities, groups and events you join.</li>
-      <li><strong>Messages:</strong> direct messages and group or community messages (see <a href="#s4">Section 4.5</a>).</li>
+      <li><strong>Messages:</strong> direct messages and group or community messages, including any photos and videos you send in them (see <a href="#s4">Section 4.5</a>).</li>
       <li><strong>Communities and groups</strong> you create: name, description, category and photo.</li>
       <li><strong>Events</strong> you host: title, description, type (in person or online), the venue or location text you type, start and end time, notes, and a cover photo. For GYM events, we also record when you confirmed you have permission to hold the event at the venue.</li>
       <li><strong>Live</strong> (iOS): stream titles, Live comments, Super Chat messages and Live Challenge votes (see Sections <a href="#s9">9</a> and <a href="#s10">10</a>).</li>
@@ -126,8 +126,10 @@
       </ul>
       <h3>4.5 Messages</h3>
       <ul>
-      <li><strong>Direct messages</strong> are text only, up to 2,000 characters, between two people.</li>
-      <li><strong>Group and community messages</strong> are text messages to the members of that group or community.</li>
+      <li><strong>Direct messages</strong> are between two people. A message can contain text (up to 2,000 characters), photos (up to 10 in one message) or one video (up to 60 seconds, including its sound).</li>
+      <li><strong>Group and community messages</strong> are sent to the members of that group or community and can contain the same text, photos and videos.</li>
+      <li>For each photo or video we store the file, a small preview image, its file type, size and dimensions (and a video's length), and the message it belongs to. We check that each file really is a supported photo or video before it is sent.</li>
+      <li><strong>Links</strong> in messages are sent as text. MATCHOS does not currently fetch previews of linked websites; a link opens only if you tap it.</li>
       </ul>
       <h3>4.6 Purchases (iOS)</h3>
       <p>If you buy MATCHOS Coins, we receive and store purchase details from Apple. See <a href="#s10">Section 10</a>.</p>
@@ -231,6 +233,7 @@
       </ul>
       <h3>7.4 Media files</h3>
       <p>Moment photos and videos, Weight Record videos, profile photos, community photos and event photos are stored in public file storage. Anyone who has a file's web address can view that file without signing in.</p>
+      <p><strong>Photos and videos in messages are not public.</strong> They are kept in private file storage that no app can read directly. The app can only show them to people who can see the message (Section 7.3), using a link that is created for that person and expires after 10 minutes. Leaving a group, being removed from it, or blocking someone stops new links being created for those messages.</p>
       <p>When you delete content, we delete the stored file. However, copies may remain in content delivery network (CDN) or browser caches for a period of time, so a previously shared address may keep working for a while after deletion.</p>
       <h3>7.5 Blocking</h3>
       <p>Blocking hides people from each other inside the app and stops new interactions between you. It does not make public information private. For example, someone you have blocked can still see your public profile and Moments while signed out.</p>
@@ -301,6 +304,7 @@
       <h2 id="s13">13. Reports and Safety</h2>
       <ul>
       <li><strong>Reporting:</strong> you can report profiles, Moments, comments, direct messages, group messages, battles and communities. A report stores who reported, who was reported, what was reported, the reason, any note you add, and a copy of the reported content at the time of the report. Depending on the content, that copy can include the reported username, a bio, post text, a media file reference or message text.</li>
+      <li><strong>Reported photos and videos in messages:</strong> when you report a direct message or a group or community message that contains photos or videos, we keep a copy of those files, together with who reported, who was reported, the message, and when it was sent and reported, as evidence for reviewing the report. This evidence is kept for <strong>180 days from the date of the report</strong>, even if the message, the group or an account is deleted in the meantime. Only MATCHOS can access it; it is never shown in the app. After 180 days it is deleted automatically, unless the report is still being handled, in which case we may keep it for as long as that review needs.</li>
       <li><strong>Who sees reports:</strong> only you can see the reports you submit. MATCHOS can see all reports. Reported people cannot see in the app who reported them.</li>
       <li><strong>Yellow Cards:</strong> reports can lead to Yellow Cards on an account, and a Yellow Card title can appear on a profile. We keep a record of which reports contributed to Yellow Cards and a log of moderation actions.</li>
       <li><strong>Moderation alerts:</strong> when an account reaches a review threshold, our systems send an email alert to the operator using Resend. The alert includes the account's username, member number, user ID, Yellow Card count, the time the account was flagged, and the reason, target type and report ID of the latest report. It does not include the reported item itself, message text, captions or media.</li>
@@ -348,10 +352,11 @@
       <section aria-labelledby="s16">
       <h2 id="s16">16. Data Retention</h2>
       <p><strong>While your account exists</strong>, we keep your profile, content, records, settings and recommendation signals until you delete them or delete your account (<a href="#s17">Section 17</a>). Your date of birth and your record of agreeing to the Terms of Service are kept while your account exists and are deleted when your account is deleted.</p>
-      <p><strong>Automatic deletion.</strong> Finished matchmaking requests are deleted 30 days after they finish. Your approximate area is deleted within 72 hours (People nearby) or 6 hours (Prefer nearby opponents only), or straight away when you turn both features off (Section 4.8).</p>
+      <p><strong>Automatic deletion.</strong> Finished matchmaking requests are deleted 30 days after they finish. Photos and videos in messages are deleted when the message is removed, when the group or conversation is deleted, or when the account is deleted (except reported files, see below); uploads that were never sent are deleted after 24 hours. Files are removed from storage by a cleanup job that runs regularly. Your approximate area is deleted within 72 hours (People nearby) or 6 hours (Prefer nearby opponents only), or straight away when you turn both features off (Section 4.8).</p>
       <p><strong>After you delete content or your account</strong>, some information is kept for the purposes below.</p>
       <ul>
       <li><strong>Moderation and safety records:</strong> reports (including the copy of reported content and the reported username), Yellow Card contribution records, moderation action logs, and moderation alert records and emails (including the username and member number at the time of the alert). We keep these to protect users, prevent repeat abuse, and handle disputes and legal claims about moderation decisions. They are linked to the user ID of the account involved. These records are not deleted automatically after a fixed period. Instead, <strong>we review them at least once a year and delete or anonymize records that are no longer reasonably necessary for safety, abuse prevention, dispute handling or applicable legal obligations.</strong> Records connected to an unresolved dispute, ongoing abuse or fraud, or a legal requirement may be kept for as long as that need continues. Copies of moderation alert emails are held in the operator's mailbox and in Resend's systems, and are covered by the same review.</li>
+      <li><strong>Reported message photos and videos:</strong> kept for 180 days from the report, as described in <a href="#s13">Section 13</a>, and then deleted automatically.</li>
       <li><strong>Purchase and accounting records:</strong> coin purchase records, transaction identifiers, refund records, accounting records for Super Chat, and Apple's signed purchase notifications (which contain your MATCHOS user ID as the purchase account token). These are a separate category from moderation records. We keep them for at least as long as required by the tax and accounting rules that apply to us, and for as long as they are needed for refunds, disputes and fraud prevention. They are not deleted automatically after a fixed period.</li>
       <li><strong>Records no longer linked to you:</strong> some records of battles, games, rooms and sessions remain after an account is deleted, with the deleted account's link removed (for example, a battle record with no participants attached, or an opponent's ranked history with your account removed).</li>
       </ul>
@@ -368,8 +373,8 @@
       <li>your Moments, comments, likes, reposts, saves, goals and records;</li>
       <li>all files stored in your account's storage folder, including photos and videos;</li>
       <li>your follows, friendships, friend requests and blocks;</li>
-      <li>your group and community messages;</li>
-      <li><strong>every direct message conversation you were part of, including the other person's messages in that conversation;</strong></li>
+      <li>your group and community messages, including the photos and videos in them;</li>
+      <li><strong>every direct message conversation you were part of, including the other person's messages and the photos and videos in that conversation;</strong></li>
       <li>your Live streams, Live comments, Super Chat messages and Live Challenge votes;</li>
       <li>your coin balance and ordinary coin transaction history;</li>
       <li>your XP, streak, online status and recommendation signals;</li>
@@ -377,7 +382,7 @@
       <li>your ordinary Yellow Card status.</li>
       </ul>
       <p>You will also be removed from any active battle, room, call or session.</p>
-      <p>The information described in <a href="#s16">Section 16</a> under "After you delete content or your account" is kept. As described in <a href="#s7">Section 7.4</a>, deleted files may remain in caches for a period of time.</p>
+      <p>The information described in <a href="#s16">Section 16</a> under "After you delete content or your account" is kept, including photos and videos from reported messages for up to 180 days from the report. As described in <a href="#s7">Section 7.4</a>, deleted files may remain in caches for a period of time.</p>
       </section>
       <section aria-labelledby="s18">
       <h2 id="s18">18. Security</h2>
