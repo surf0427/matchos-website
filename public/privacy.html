@@ -39,7 +39,7 @@
     <article class="wrap" aria-labelledby="page-title">
       <h1 id="page-title">Privacy Policy</h1>
       <p class="meta"><strong>Effective date:</strong> October 3, 2026<br>
-      <strong>Last updated:</strong> October 12, 2026</p>
+      <strong>Last updated:</strong> October 13, 2026</p>
       <nav class="toc" aria-labelledby="toc-title">
       <h2 id="toc-title">Contents</h2>
       <ol>
@@ -120,7 +120,7 @@
       <li><strong>Social connections:</strong> who you follow and who follows you, friend requests and friendships, accounts you block, and the communities, groups and events you join.</li>
       <li><strong>Messages:</strong> direct messages and group or community messages, including any photos and videos you send in them (see <a href="#s4">Section 4.5</a>).</li>
       <li><strong>Communities and groups</strong> you create: name, description, category and photo.</li>
-      <li><strong>Events</strong> you host: title, description, type (in person or online), the venue or location text you type, start and end time, notes, and a cover photo. For GYM events, we also record when you confirmed you have permission to hold the event at the venue.</li>
+      <li><strong>Events</strong> you host: title, description, type (in person, online or both), the venue, start and end time, notes, an optional group name, and a cover photo. For an in-person event, the venue is the place you choose from a place search: its name, its address and its map coordinates (latitude and longitude). Events created before venues were chosen from a search keep the venue text that was typed, with no address or coordinates. For GYM events, we also record when you confirmed you have permission to hold the event at the venue. See <a href="#s4">Section 4.8</a>.</li>
       <li><strong>Live</strong> (iOS): stream titles, Live comments, Super Chat messages and Live Challenge votes (see Sections <a href="#s9">9</a> and <a href="#s10">10</a>).</li>
       <li><strong>Reports</strong> you submit (see <a href="#s13">Section 13</a>).</li>
       </ul>
@@ -144,24 +144,29 @@
       <p><strong>Approximate location (optional).</strong> MATCHOS asks for your device's approximate location only when you choose to use one of these features:</p>
       <ul>
       <li><strong>People nearby</strong> in Moment, when you turn on "Show me to people nearby";</li>
-      <li><strong>Prefer nearby opponents</strong> in Settings, which applies to Casual HOME battles and Casual GYM Machine and Free Weight battles.</li>
+      <li><strong>Prefer nearby opponents</strong> in Settings, which applies to Casual HOME battles and Casual GYM Machine and Free Weight battles;</li>
+      <li><strong>Near me</strong> in the HOME and GYM Events board (iOS), when you choose to search for events around where you are.</li>
       </ul>
       <p>MATCHOS does not read your location when the app starts, does not track it continuously, and never reads it in the background. On iOS, MATCHOS asks only for "While Using the App" access and requests reduced (approximate) accuracy. On Android, MATCHOS asks only for approximate location; it does not ask for precise or background location.</p>
       <p>How it works:</p>
       <ul>
       <li><strong>Your device turns the reading into an approximate area of about 5 km before anything is sent.</strong> The raw latitude and longitude stay on your device, are used only to work out that area, and are then discarded. They are never sent to MATCHOS servers.</li>
-      <li><strong>We store only a coarse area identifier</strong>, linked to your account, to run these features. We keep one current area per account. A new reading replaces the old one, so we keep no history of where you have been.</li>
+      <li><strong>For Events, the area is used for one search and not stored.</strong> When you choose Near me in Events, the app sends the centre of your approximate area as the point to search from, together with the distance you chose. It is used to find events for that search and is not saved.</li>
+      <li><strong>We store only a coarse area identifier</strong>, linked to your account, to run People nearby and Prefer nearby opponents. We keep one current area per account. A new reading replaces the old one, so we keep no history of where you have been.</li>
       <li><strong>It expires.</strong> The area is deleted automatically: within 72 hours if you use People nearby, or within 6 hours if you use only Prefer nearby opponents. It is deleted straight away when you turn both features off, when you take location access away from MATCHOS in your device settings (the next time you open the app), when your account is restricted, or when you delete your account.</li>
       <li><strong>People nearby is mutual.</strong> Only people who have turned on "Show me to people nearby" appear in each other's list, and you can see people nearby only while you are visible yourself. Blocked and restricted accounts are not shown. Other users see only a label such as "Nearby" or "In your area". They never see your exact location, your coordinates, your area identifier, or a distance.</li>
       <li><strong>Battles use it only as a preference.</strong> If both players have turned on Prefer nearby opponents, a nearby opponent is tried first; if there is none, you are matched as usual straight away. Your area is not shown in battles or results. Ranked, Friend, 4-player, Cardio and Chat Mode matchmaking do not use location.</li>
-      <li><strong>What it is not used for:</strong> advertising, tracking, recommendations, events, or showing anyone's exact position. Events use only the venue text that hosts type.</li>
-      <li>If you do not allow location, MATCHOS keeps working, and Near me shows people in the city you set.</li>
+      <li><strong>What it is not used for:</strong> advertising, tracking, recommendations, or showing anyone's exact position. Your approximate area is never stored with an event and never shown to other users.</li>
+      <li>If you do not allow location, MATCHOS keeps working: Near me in Moment shows people in the city you set, and you can still search Events by typing a place.</li>
       </ul>
+      <p><strong>Event venues.</strong> Event venues are different from your device's location. When you host an in-person HOME event, a HOME event that is both in person and online, or a GYM event, you choose its venue from a place search. MATCHOS stores the place you chose (its name, its address and its map coordinates) as part of the event, to show the venue and to let people find events within a distance of a place. Signed-in users can see the venue's name and address, and when they search by place, a distance to it rounded to 0.1 km. The coordinates are used on our servers to work out distances and are not shown or sent to other users. Events of a host you have blocked, or who has blocked you, are not shown. Because other users can see the venue, choose a public place rather than an address you want to keep private. Online events have no venue.</p>
+      <p><strong>Keeping and deleting event venues.</strong> You can change an event's venue by editing the event. Cancelling an event removes it from the Events board, but the event, including its venue, is kept and can still be seen by you and the people who joined it. Events, cancelled or not, are not deleted automatically after they end; an event and its venue are deleted when the host's account is deleted (<a href="#s17">Section 17</a>).</p>
+      <p><strong>Place search.</strong> Searching for a place (an event venue, or a place to search for events around) does not need location access and does not use your device's location. On iOS, place search uses Apple Maps: what you type, and the area the search should prefer, are sent to Apple to find matching places. On Android, place search uses the place-search (geocoding) service built into your device, which on most devices is provided by Google; what you type is sent to that service.</p>
       <p><strong>Other location-related information</strong> MATCHOS handles:</p>
       <ul>
       <li>the nationality you select and the city you type on your profile. Your city is used for the "Near me" list of people in the same city;</li>
       <li>your device's time zone;</li>
-      <li>the venue or location text that event hosts type;</li>
+      <li>event venues that hosts choose (name, address and map coordinates), and the venue text typed for events created before venues were chosen from a search;</li>
       <li>IP addresses, which are processed for network connections, calls and Live streaming (Sections <a href="#s8">8</a> and <a href="#s9">9</a>).</li>
       </ul>
       <p>We do not use your IP address to work out where you are.</p>
@@ -175,7 +180,7 @@
       <p>MATCHOS does not collect:</p>
       <ul>
       <li>your email address, phone number or real name (you can choose to put your real name in your username or bio);</li>
-      <li>your precise location, such as GPS coordinates (your device converts location to an approximate area of about 5 km before anything is sent; see Section 4.8);</li>
+      <li>your device's precise location, such as GPS coordinates (your device converts location to an approximate area of about 5 km before anything is sent; see Section 4.8). The map coordinates of an event venue are the place its host chose for the event, not anyone's device location;</li>
       <li>data from Apple Health, Health Connect or Google Fit, or your body weight, heart rate or medical information;</li>
       <li>your device's advertising identifier;</li>
       <li>your card number or other payment details (Apple handles payment);</li>
@@ -192,6 +197,7 @@
       <li><strong>run MATCHOS:</strong> create and maintain your account; show your profile; run battles, games, calls, Live streams and events; deliver messages; and calculate records, rankings, XP, Tiers and streaks;</li>
       <li><strong>check the minimum age and keep a record of your agreement to the Terms of Service</strong>, using your date of birth and the Terms version you agreed to (Section 4.9);</li>
       <li><strong>show people nearby and prefer nearby opponents</strong>, only if you turn these features on (Section 4.8);</li>
+      <li><strong>show event venues and find events by place and distance</strong>, using the venues hosts choose and the search point you choose (Section 4.8);</li>
       <li><strong>recommend content</strong> in the For You feed (<a href="#s12">Section 12</a>);</li>
       <li><strong>process coin purchases, Super Chat and refunds</strong>, and keep the related records (<a href="#s10">Section 10</a>);</li>
       <li><strong>send push notifications</strong> (<a href="#s11">Section 11</a>);</li>
@@ -218,7 +224,7 @@
       <li>your level, XP, Tier and ranked statistics, such as wins and losses;</li>
       <li>whether you are online now, and your current and longest streak;</li>
       <li>a summary of your activity calendar: the exercise or game, the mode, and HOME or GYM, but not your results, reps or opponents;</li>
-      <li>events, and the list of people taking part in each event;</li>
+      <li>events, including the venue's name and address and, when you search by place, the distance to it, and the list of people taking part in each event;</li>
       <li>communities, including their names, descriptions and member counts;</li>
       <li>Live streams, Live comments and Super Chat messages;</li>
       <li>a Yellow Card title on your profile, if you have received Yellow Cards;</li>
@@ -320,7 +326,7 @@
       <tr><th scope="row"><strong>Mux</strong> (iOS Live)</th><td data-label="What it does for MATCHOS">Live stream ingest, delivery and playback</td><td data-label="Information involved">Live video and audio (including Live Challenge challengers), a stream identifier, and viewers' network information such as IP addresses</td></tr>
       <tr><th scope="row"><strong>Cloudflare</strong></th><td data-label="What it does for MATCHOS">Relay (TURN) for calls that cannot connect directly; hosting of the MATCHOS website</td><td data-label="Information involved">IP addresses and encrypted call traffic; website request data such as IP addresses</td></tr>
       <tr><th scope="row"><strong>Google – Firebase Cloud Messaging</strong> (Android)</th><td data-label="What it does for MATCHOS">Delivering push notifications</td><td data-label="Information involved">Messaging token, Firebase installation ID, notification content (generic titles)</td></tr>
-      <tr><th scope="row"><strong>Apple</strong></th><td data-label="What it does for MATCHOS">In-App Purchase, purchase verification and notifications, Apple Push Notification service</td><td data-label="Information involved">Purchase and transaction information, your MATCHOS user ID as a purchase account token, push tokens</td></tr>
+      <tr><th scope="row"><strong>Apple</strong></th><td data-label="What it does for MATCHOS">In-App Purchase, purchase verification and notifications, Apple Push Notification service; Apple Maps place search on iOS (Section 4.8)</td><td data-label="Information involved">Purchase and transaction information, your MATCHOS user ID as a purchase account token, push tokens; the text of place searches and the area a search should prefer</td></tr>
       <tr><th scope="row"><strong>Resend</strong></th><td data-label="What it does for MATCHOS">Sending moderation alert emails to the operator</td><td data-label="Information involved">The fields listed in <a href="#s13">Section 13</a></td></tr>
       </tbody></table></div>
       <p>Your device also contacts <strong>Google's public STUN servers</strong> to find a network path for calls (<a href="#s8">Section 8</a>). These servers see your IP address. We do not send them any other information, and we do not have a separate agreement with Google for them.</p>
@@ -352,7 +358,8 @@
       <section aria-labelledby="s16">
       <h2 id="s16">16. Data Retention</h2>
       <p><strong>While your account exists</strong>, we keep your profile, content, records, settings and recommendation signals until you delete them or delete your account (<a href="#s17">Section 17</a>). Your date of birth and your record of agreeing to the Terms of Service are kept while your account exists and are deleted when your account is deleted.</p>
-      <p><strong>Automatic deletion.</strong> Finished matchmaking requests are deleted 30 days after they finish. Photos and videos in messages are deleted when the message is removed, when the group or conversation is deleted, or when the account is deleted (except reported files, see below); uploads that were never sent are deleted after 24 hours. Files are removed from storage by a cleanup job that runs regularly. Your approximate area is deleted within 72 hours (People nearby) or 6 hours (Prefer nearby opponents only), or straight away when you turn both features off (Section 4.8).</p>
+      <p><strong>Automatic deletion.</strong> Finished matchmaking requests are deleted 30 days after they finish. Photos and videos in messages are deleted when the message is removed, when the group or conversation is deleted, or when the account is deleted (except reported files, see below); uploads that were never sent are deleted after 24 hours. Files are removed from storage by a cleanup job that runs regularly. Your approximate area is deleted within 72 hours (People nearby) or 6 hours (Prefer nearby opponents only), or straight away when you turn both features off (Section 4.8). The search point used for Near me in Events is not stored.</p>
+      <p><strong>Events.</strong> Events you host, including their venue (name, address and map coordinates), are not deleted automatically when they end or when you cancel them. They are kept while your account exists and are deleted when you delete your account (Section 4.8).</p>
       <p><strong>After you delete content or your account</strong>, some information is kept for the purposes below.</p>
       <ul>
       <li><strong>Moderation and safety records:</strong> reports (including the copy of reported content and the reported username), Yellow Card contribution records, moderation action logs, and moderation alert records and emails (including the username and member number at the time of the alert). We keep these to protect users, prevent repeat abuse, and handle disputes and legal claims about moderation decisions. They are linked to the user ID of the account involved. These records are not deleted automatically after a fixed period. Instead, <strong>we review them at least once a year and delete or anonymize records that are no longer reasonably necessary for safety, abuse prevention, dispute handling or applicable legal obligations.</strong> Records connected to an unresolved dispute, ongoing abuse or fraud, or a legal requirement may be kept for as long as that need continues. Copies of moderation alert emails are held in the operator's mailbox and in Resend's systems, and are covered by the same review.</li>
@@ -373,6 +380,7 @@
       <li>your Moments, comments, likes, reposts, saves, goals and records;</li>
       <li>all files stored in your account's storage folder, including photos and videos;</li>
       <li>your follows, friendships, friend requests and blocks;</li>
+      <li>the events you host, including their venues (name, address and map coordinates), and your place in events you joined;</li>
       <li>your group and community messages, including the photos and videos in them;</li>
       <li><strong>every direct message conversation you were part of, including the other person's messages and the photos and videos in that conversation;</strong></li>
       <li>your Live streams, Live comments, Super Chat messages and Live Challenge votes;</li>
@@ -412,6 +420,7 @@
       <ul>
       <li>You cannot delete individual direct messages. A direct message conversation is deleted only when either participant's account is deleted.</li>
       <li>Ordinary members cannot delete their own group or community messages. Hosts and moderators can remove them (<a href="#s13">Section 13</a>). Your group messages are deleted when your account is deleted. Leaving a group does not delete them.</li>
+      <li>You cannot delete an event you host. You can edit it, including its venue, or cancel it; a cancelled event is kept until your account is deleted (Section 4.8).</li>
       <li>There is no in-app tool to download a copy of your data, or to restrict or object to particular uses of your data.</li>
       </ul>
       <p><strong>Requests by email.</strong> Depending on where you live, you may have the right to:</p>
