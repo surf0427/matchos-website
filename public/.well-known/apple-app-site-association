@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["573M8Q3LZ4.app.fitbattle.entry"],
+        "components": [
+          { "/": "/u/*", "comment": "A Challenge Letter leads to its sender's profile. Every other page stays in the browser." }
+        ]
+      }
+    ]
+  }
+}

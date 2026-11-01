@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.fitbattle.app",
+      "sha256_cert_fingerprints": ["14:00:9E:75:A6:C9:AF:C8:A5:1D:80:22:9C:FD:02:D4:CC:EB:48:5E:61:96:60:42:9C:71:0A:19:14:28:33:80"]
+    }
+  }
+]

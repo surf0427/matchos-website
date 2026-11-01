@@ -6,3 +6,12 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
   Strict-Transport-Security: max-age=31536000
+
+# Universal Links: Apple reads this file as JSON, and it has no extension.
+/.well-known/apple-app-site-association
+  Content-Type: application/json
+
+# The profile landing page runs its one script, from this site only.
+/u/*
+  ! Content-Security-Policy
+  Content-Security-Policy: default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'

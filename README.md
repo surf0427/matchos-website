@@ -8,6 +8,8 @@ The MATCHOS official website: a static site served by Cloudflare Workers Static 
 | `/privacy` | `public/privacy.html` |
 | `/terms`   | `public/terms.html`   |
 | `/support` | `public/support.html` |
+| `/u/*`     | `public/u/index.html` (a Challenge Letter's link to its sender's profile, via `public/_redirects`) |
+| `/.well-known/apple-app-site-association`, `/.well-known/assetlinks.json` | Universal Links and App Links, for `/u/*` only |
 | other      | `public/404.html` (404 status) |
 
 There is no build step, framework or Worker script. `wrangler.jsonc` points Wrangler at
