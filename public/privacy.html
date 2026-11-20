@@ -92,7 +92,8 @@
       <h2 id="s4">4. Information We Collect</h2>
       <h3>4.1 Account</h3>
       <p>When you agree to the Terms of Service in the app, MATCHOS creates an account for you automatically. You then complete the initial setup (choosing a username, your nationality and your app language). The account is identified by a randomly generated user ID, and the sign-in credential for it is stored on your device.</p>
-      <p>We do not ask for your email address, phone number, real name or a password to create an account. Because of this, if you log out or lose your device, you will probably not be able to sign back in to the same account.</p>
+      <p><strong>Sign in with Apple (iOS).</strong> New accounts on iOS are created with Sign in with Apple. From Apple we receive an identifier for your Apple account and the email address you choose to share with us, which may be a private relay address created by Apple ("Hide My Email"). We use them to sign you in to the same MATCHOS account again, for example after you log out or on a new device. We do not use this email address for marketing, we do not show it to other users, and we never receive your Apple password. To enforce suspensions and bans, we also keep a keyed hash (HMAC-SHA256) of the Apple account identifier, not the identifier itself (Section 16).</p>
+      <p><strong>Accounts without Sign in with Apple.</strong> Accounts created earlier without Sign in with Apple have no email address, phone number, real name or password. If you log out of such an account or lose your device, you will probably not be able to sign back in to it.</p>
       <h3>4.2 Profile</h3>
       <ul>
       <li><strong>Username</strong>, which you choose.</li>
@@ -204,7 +205,7 @@
       <h2 id="s5">5. Information We Do Not Collect</h2>
       <p>MATCHOS does not collect:</p>
       <ul>
-      <li>your email address, phone number or real name (you can choose to put your real name in your username or bio);</li>
+      <li>your phone number or real name, or your email address unless you share it through Sign in with Apple (Section 4.1) (you can choose to put your real name in your username or bio);</li>
       <li>your device's precise location, such as GPS coordinates (your device converts location to an approximate area of about 5 km before anything is sent; see Section 4.8). The map coordinates of an event venue are the place its host chose for the event, and the point where your Battle Map pin is drawn is chosen by our server inside your approximate area; neither is anyone's device location;</li>
       <li>data from Apple Health, Health Connect or Google Fit, or your body weight, heart rate or medical information;</li>
       <li>your device's advertising identifier;</li>
@@ -354,7 +355,7 @@
       <tr><th scope="row"><strong>Mux</strong> (iOS Live)</th><td data-label="What it does for MATCHOS">Live stream ingest, delivery and playback</td><td data-label="Information involved">Live video and audio (including Live Challenge challengers), a stream identifier, and viewers' network information such as IP addresses</td></tr>
       <tr><th scope="row"><strong>Cloudflare</strong></th><td data-label="What it does for MATCHOS">Relay (TURN) for calls that cannot connect directly; hosting of the MATCHOS website</td><td data-label="Information involved">IP addresses and encrypted call traffic; website request data such as IP addresses</td></tr>
       <tr><th scope="row"><strong>Google – Firebase Cloud Messaging</strong> (Android)</th><td data-label="What it does for MATCHOS">Delivering push notifications</td><td data-label="Information involved">Messaging token, Firebase installation ID, notification content (generic titles)</td></tr>
-      <tr><th scope="row"><strong>Apple</strong></th><td data-label="What it does for MATCHOS">In-App Purchase, purchase verification and notifications, Apple Push Notification service; Apple Maps place search and the Battle Map's map on iOS (Section 4.8)</td><td data-label="Information involved">Purchase and transaction information, your MATCHOS user ID as a purchase account token, push tokens; the text of place searches and the area a search should prefer; the parts of the map you look at, and network information such as your IP address, when the map is loaded</td></tr>
+      <tr><th scope="row"><strong>Apple</strong></th><td data-label="What it does for MATCHOS">Sign in with Apple (iOS); In-App Purchase, purchase verification and notifications, Apple Push Notification service; Apple Maps place search and the Battle Map's map on iOS (Section 4.8)</td><td data-label="Information involved">For Sign in with Apple: your Apple account identifier and the email address you choose to share (Section 4.1); purchase and transaction information, your MATCHOS user ID as a purchase account token, push tokens; the text of place searches and the area a search should prefer; the parts of the map you look at, and network information such as your IP address, when the map is loaded</td></tr>
       <tr><th scope="row"><strong>Resend</strong></th><td data-label="What it does for MATCHOS">Sending moderation alert emails to the operator</td><td data-label="Information involved">The fields listed in <a href="#s13">Section 13</a></td></tr>
       <tr><th scope="row"><strong>OpenAI</strong></th><td data-label="What it does for MATCHOS">Automatic screening of posts and pictures for harmful content (moderation API)</td><td data-label="Information involved">Text of Moments and comments, and images (sent as a link that expires after 5 minutes), without your user ID or account details (<a href="#s13">Section 13</a>)</td></tr>
       </tbody></table></div>
@@ -394,6 +395,7 @@
       <p><strong>After you delete content or your account</strong>, some information is kept for the purposes below.</p>
       <ul>
       <li><strong>Moderation and safety records:</strong> reports (including the copy of reported content and the reported username), Yellow Card contribution records, moderation action logs, and moderation alert records and emails (including the username and member number at the time of the alert). We keep these to protect users, prevent repeat abuse, and handle disputes and legal claims about moderation decisions. They are linked to the user ID of the account involved. These records are not deleted automatically after a fixed period. Instead, <strong>we review them at least once a year and delete or anonymize records that are no longer reasonably necessary for safety, abuse prevention, dispute handling or applicable legal obligations.</strong> Records connected to an unresolved dispute, ongoing abuse or fraud, or a legal requirement may be kept for as long as that need continues. Copies of moderation alert emails are held in the operator's mailbox and in Resend's systems, and are covered by the same review.</li>
+      <li><strong>Sign-in identity of a banned account:</strong> if an account is permanently banned and then deleted, the keyed hash of its Apple account identifier (Section 4.1) is kept for up to 730 days, so that the ban cannot be avoided by creating a new account with the same Apple account, and is then deleted. The ban itself is part of the moderation records above. For a temporary suspension, the hash is kept only until the suspension ends.</li>
       <li><strong>Reported message photos and videos:</strong> kept for 180 days from the report, as described in <a href="#s13">Section 13</a>, and then deleted automatically.</li>
       <li><strong>Purchase and accounting records:</strong> coin purchase records, transaction identifiers, refund records, accounting records for Super Chat, and Apple's signed purchase notifications (which contain your MATCHOS user ID as the purchase account token). These are a separate category from moderation records. We keep them for at least as long as required by the tax and accounting rules that apply to us, and for as long as they are needed for refunds, disputes and fraud prevention. They are not deleted automatically after a fixed period.</li>
       <li><strong>Records no longer linked to you:</strong> some records of battles, games, rooms and sessions remain after an account is deleted, with the deleted account's link removed (for example, a battle record with no participants attached, or an opponent's ranked history with your account removed).</li>
@@ -403,7 +405,7 @@
       <section aria-labelledby="account-deletion"><span id="s17"></span>
       <h2 id="account-deletion">17. Account Deletion</h2>
       <p><strong>In the app:</strong> go to <strong>Settings → Delete Account</strong>. Deletion is permanent and cannot be undone.</p>
-      <p><strong>If you can no longer use the app</strong> (for example, you lost your device), you can ask us to delete your account by emailing <a href="mailto:surf6589@gmail.com">surf6589@gmail.com</a> with your username and member number. Because MATCHOS accounts have no email address or password, we may ask for further information to confirm the account is yours before we delete it.</p>
+      <p><strong>If you can no longer use the app</strong> (for example, you lost your device), you can ask us to delete your account by emailing <a href="mailto:surf6589@gmail.com">surf6589@gmail.com</a> with your username and member number. If your account is not linked to Sign in with Apple, it has no email address or password, so we may ask for further information to confirm the account is yours before we delete it.</p>
       <p>When your account is deleted, we delete:</p>
       <ul>
       <li>your profile, settings and matchmaking preferences;</li>
@@ -418,7 +420,8 @@
       <li>your coin balance and ordinary coin transaction history;</li>
       <li>your XP, streak, online status and recommendation signals;</li>
       <li>your push tokens;</li>
-      <li>your ordinary Yellow Card status.</li>
+      <li>your ordinary Yellow Card status;</li>
+      <li>your sign-in information, including the link to your Apple account and the email address received from Apple (except the keyed hash described in Section 16 for a banned account).</li>
       </ul>
       <p>You will also be removed from any active battle, room, call or session.</p>
       <p>The information described in <a href="#s16">Section 16</a> under "After you delete content or your account" is kept, including photos and videos from reported messages for up to 180 days from the report. As described in <a href="#s7">Section 7.4</a>, deleted files may remain in caches for a period of time.</p>
@@ -433,7 +436,7 @@
       <li>processing uploaded photos and videos so that embedded location metadata is not kept;</li>
       <li>contractual commitments from our service providers (<a href="#s15">Section 15</a>).</li>
       </ul>
-      <p>No method of storage or transmission is completely secure, and we cannot guarantee absolute security. Because MATCHOS accounts are anonymous and the sign-in credential is stored on your device, please keep your device secure.</p>
+      <p>No method of storage or transmission is completely secure, and we cannot guarantee absolute security. The sign-in credential for your account is stored on your device, so please keep your device secure.</p>
       </section>
       <section aria-labelledby="s19">
       <h2 id="s19">19. Your Privacy Rights</h2>
@@ -462,7 +465,7 @@
       <li>have us stop or restrict certain uses of it, or object to them (including For You personalisation);</li>
       <li>receive it in a portable format.</li>
       </ul>
-      <p>To make a request, email <a href="mailto:surf6589@gmail.com">surf6589@gmail.com</a>. MATCHOS accounts are not linked to an email address, so we may ask for information from the app, such as your username and member number, to confirm the account is yours. We do not charge a fee for requests. You can also contact us at the same address with any complaint about how we handle your personal information.</p>
+      <p>To make a request, email <a href="mailto:surf6589@gmail.com">surf6589@gmail.com</a>. Because an email address received from Apple may be a private relay address, and older accounts have none, we may ask for information from the app, such as your username and member number, to confirm the account is yours. We do not charge a fee for requests. You can also contact us at the same address with any complaint about how we handle your personal information.</p>
       </section>
       <section aria-labelledby="s20">
       <h2 id="s20">20. EEA and UK Information</h2>
