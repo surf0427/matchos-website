@@ -1,0 +1,90 @@
+/* The e-mail case page (/m/case). Tokens come from /styles.css. */
+
+.case-page {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 16px max(16px, env(safe-area-inset-left)) calc(170px + env(safe-area-inset-bottom));
+}
+.case-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+.case-head h1 { font-size: 24px; margin: 0 0 6px; }
+.case-meta { color: var(--text-secondary); font-size: 14px; margin: 0 0 16px; }
+
+.case-card {
+  background: var(--card-fill);
+  border: 1px solid var(--card-stroke);
+  border-radius: var(--card-radius);
+  padding: 14px 16px;
+  margin: 0 0 12px;
+}
+.case-card h2 { font-size: 13px; letter-spacing: 0.04em; color: var(--text-tertiary); margin: 0 0 8px; font-weight: 600; }
+.case-author { font-weight: 600; margin: 0 0 2px; }
+.case-time { color: var(--text-tertiary); font-size: 13px; margin: 0 0 8px; }
+.case-text { white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; font-size: 17px; line-height: 1.5; }
+.case-empty { color: var(--text-tertiary); font-style: italic; }
+
+.case-media { display: grid; gap: 8px; margin: 0 0 10px; }
+.case-media img, .case-media video { width: 100%; max-height: 55vh; object-fit: contain; border-radius: var(--tile-radius); background: #111; display: block; }
+.case-parent .case-media img, .case-parent .case-media video { max-height: 30vh; }
+.case-media .case-missing { color: var(--text-tertiary); font-size: 14px; padding: 24px; text-align: center; border: 1px dashed var(--card-stroke); border-radius: var(--tile-radius); }
+
+.case-badge {
+  display: inline-block;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--card-stroke);
+  color: var(--text-secondary);
+  margin: 0 0 8px;
+}
+.case-badge.warn { border-color: #f59e0b; color: #fbbf24; }
+.case-badge.bad { border-color: #ef4444; color: #f87171; }
+
+.case-report { padding: 8px 0; border-top: 1px solid var(--card-stroke); }
+.case-report:first-of-type { border-top: 0; padding-top: 0; }
+.case-report strong { display: block; }
+.case-report p { margin: 4px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; color: var(--text-secondary); }
+
+.case-context .case-comment { padding: 8px 10px; border-radius: 12px; margin: 0 0 6px; }
+.case-context .case-comment.target { background: rgba(239, 68, 68, 0.14); border: 1px solid #ef4444; }
+.case-context .case-comment .case-author { font-size: 14px; }
+.case-context .case-comment .case-text { font-size: 15px; }
+.case-parent .case-text { font-size: 15px; color: var(--text-secondary); }
+
+.case-actions {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.92);
+  border-top: 1px solid var(--card-stroke);
+  padding: 12px max(16px, env(safe-area-inset-left)) calc(12px + env(safe-area-inset-bottom));
+}
+.case-actions-inner { max-width: 560px; margin: 0 auto; display: grid; gap: 10px; }
+.case-actions p { margin: 0; color: var(--text-secondary); font-size: 14px; }
+.case-btn {
+  min-height: var(--control-height);
+  border-radius: var(--corner-radius);
+  border: 1px solid var(--field-stroke);
+  background: var(--card-fill-featured);
+  color: var(--text-primary);
+  font: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  width: 100%;
+}
+.case-btn.danger { background: #dc2626; border-color: #dc2626; color: #fff; }
+.case-btn.primary { background: var(--brand-gradient); border: 0; color: var(--cta-label); }
+.case-btn[disabled] { opacity: 0.5; }
+.case-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.case-stack { display: grid; gap: 10px; }
+
+.case-result { text-align: center; padding: 32px 8px; }
+.case-result .case-big { font-size: 22px; font-weight: 700; margin: 0 0 8px; }
+.case-note { color: var(--text-secondary); font-size: 14px; }
+.case-hold { border-color: #f59e0b; }
+.case-match { font-family: ui-monospace, Menlo, monospace; background: rgba(245, 158, 11, 0.14); border-radius: 8px; padding: 6px 10px; margin: 6px 0; overflow-wrap: anywhere; }

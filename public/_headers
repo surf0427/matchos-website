@@ -15,3 +15,15 @@
 /u/*
   ! Content-Security-Policy
   Content-Security-Policy: default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+
+# The moderation case page (opened from the operator's report e-mail). Its one
+# script talks only to the moderation-case Edge Function; post pictures and
+# videos come as short-lived signed Storage URLs from the same project. Never
+# cached, never indexed, never sends a Referer.
+/m/*
+  ! Content-Security-Policy
+  Content-Security-Policy: default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data: https://gckhqhtkkedmfswjauvw.supabase.co; media-src https://gckhqhtkkedmfswjauvw.supabase.co; connect-src https://gckhqhtkkedmfswjauvw.supabase.co; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+  ! Referrer-Policy
+  Referrer-Policy: no-referrer
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow
